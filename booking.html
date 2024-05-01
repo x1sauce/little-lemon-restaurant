@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="logos/Asset 14@4x.png" id="headerimg" alt="Little Lemon Restaurant Header Logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="booking.html">Book</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Book a Table</h1>
+        <form action="" method="post">
+            <!-- <fieldset id="size">
+                <label>
+                    <input type="radio" value="2" name="size"> 2-person table
+                </label>
+                <label>
+                    <input type="radio" value="4" name="size" checked> 4-person table
+                </label>
+                <label>
+                    <input type="radio" value="6" name="size"> 6-person table
+                </label>
+
+            </fieldset>
+            <fieldset id="location">
+                <label>
+                    <input type="radio" value="indoors" name="location" checked> Indoors
+                </label>
+                <label><input type="radio" value="outdoors" name="location"> Outdoors
+                </label>
+            </fieldset> -->
+            <div>
+                <label for="booking_date">Booking Date: </label>
+                <input type="date" id="booking_date" name="booking_date">
+            </div>
+            <div>
+                <label for="booking_people">Number of people: </label>
+                <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <div>
+                <label for="booking_location">Location: </label>
+                <input id="booking_location" name="booking_location" list="locations">
+                <datalist id="locations">
+                    <option value="Downtown"></option>
+                    <option value="Uptown"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="user_check_policy">I agree to the cancellation policy.</label>
+                <input type="checkbox" id="user_check_policy" name="user_check_policy" required>
+            </div>
+            <div>
+                <button type="submit">Book Table</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <img src="logos/Asset 18@4x.png" id="footerimg" alt="Little Lemon Footer logo">
+        </div>
+        <div>
+            <hr>
+            <p class="copyright">Copyright Little Lemon 2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>
